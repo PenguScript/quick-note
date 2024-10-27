@@ -19,3 +19,15 @@
         @apply overflow-hidden;
     }
 }
+
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-neutral-700 rounded-md;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
