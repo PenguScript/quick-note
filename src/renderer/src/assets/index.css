@@ -3,31 +3,32 @@
 @tailwind utilities;
 
 @layer base {
-    #root {
-        @apply h-full;
-    }
+  #root {
+    @apply h-full;
+  }
 
-    html,body {
-        @apply h-full;
+  html,
+  body {
+    @apply h-full;
 
-        @apply select-none;
+    @apply select-none;
 
-        @apply bg-transparent;
+    @apply bg-transparent;
 
-        @apply font-mono antialiased text-white;
+    @apply font-mono antialiased text-white;
 
-        @apply overflow-hidden;
-    }
+    @apply overflow-hidden;
+  }
 }
 
 ::-webkit-scrollbar {
-    @apply w-2;
+  @apply w-2;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-neutral-700 rounded-md;
+  @apply bg-neutral-700 rounded-md;
 }
 
 ::-webkit-scrollbar-track {
-    @apply bg-transparent;
+  @apply bg-transparent;
 }

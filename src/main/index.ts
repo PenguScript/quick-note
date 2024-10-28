@@ -2,8 +2,8 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
-import { createNote, getNotes, readNote, writeNote, deleteNote } from './lib';
-import { GetNotes, ReadNote, WriteNote, CreateNote, DeleteNote } from '@shared/types';
+import { createNote, getNotes, readNote, writeNote, deleteNote } from './lib'
+import { GetNotes, ReadNote, WriteNote, CreateNote, DeleteNote } from '@shared/types'
 
 function createWindow(): void {
   // Create the browser window.
@@ -17,12 +17,12 @@ function createWindow(): void {
     title: 'QuickNote',
     backgroundColor: '#383838',
     titleBarOverlay: {
-      color: '2b2b2b',
+      color: '2b2b2b'
     },
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
-      contextIsolation: true,
+      contextIsolation: true
     }
   })
 

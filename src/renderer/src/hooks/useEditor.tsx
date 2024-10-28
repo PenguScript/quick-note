@@ -33,8 +33,8 @@ export const useEditor = () => {
 
     const content = editorRef.current?.getMarkdown()
 
-    if(content != null) {
-        await saveNote(content)
+    if (content != null) {
+      await saveNote(content)
     }
   }
 
