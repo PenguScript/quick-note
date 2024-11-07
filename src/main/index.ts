@@ -1,9 +1,10 @@
 import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
-import { electronApp, optimizer, is } from '@electron-toolkit/utils'
+import { electronApp, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 import { createNote, getNotes, readNote, writeNote, deleteNote } from './lib'
 import { GetNotes, ReadNote, WriteNote, CreateNote, DeleteNote } from '@shared/types'
+
 
 function createWindow(): void {
   // Create the browser window.
@@ -54,9 +55,9 @@ app.whenReady().then(() => {
   // Default open or close DevTools by F12 in development
   // and ignore CommandOrControl + R in production.
   // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
-  app.on('browser-window-created', (_, window) => {
-    optimizer.watchWindowShortcuts(window)
-  })
+  //app.on('browser-window-created', (_, window) => {
+  //  optimizer.watchWindowShortcuts(window)
+  //})
 
   // IPC test
   ipcMain.handle('getNotes', (_, ...args: Parameters<GetNotes>) => getNotes(...args))
